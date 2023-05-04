@@ -1,0 +1,44 @@
+$teamImageSize: 200px;
+
+.section {
+  padding-top: 88px;
+  margin-top: -88px;
+
+  screen-md {
+    padding-top: 112px;
+    margin-top: -112px;
+  }
+}
+
+%teamImageSize {
+  @apply rounded-full;
+
+  width: $teamImageSize;
+  height: $teamImageSize;
+}
+
+.team {
+  @apply flex flex-wrap justify-center sm:ml-2 sm:mr-2;
+
+  .person {
+    @apply flex flex-col items-center mt-6 mb-6 ml-4 mr-4;
+
+    width: 256px;
+
+    img {
+      @extend %teamImageSize;
+    }
+
+    .initials {
+      @apply text-center text-white;
+      @extend %teamImageSize;
+      background-color: #bebebe;
+      font-size: 6rem;
+      line-height: $teamImageSize;
+
+      &.withBorder {
+        border: 4px solid #1E8BC3;
+      }
+    }
+  }
+}

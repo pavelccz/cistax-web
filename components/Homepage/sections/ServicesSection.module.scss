@@ -1,0 +1,143 @@
+.section {
+  padding-top: 88px;
+  margin-top: -88px;
+
+  screen-md {
+    padding-top: 112px;
+    margin-top: -112px;
+  }
+}
+
+.mainImage {
+  @apply pb-16 pt-16 relative;
+
+  .image {
+    @apply absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-size: cover;
+  }
+
+  .overlay {
+    @apply absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background: linear-gradient(275.88deg, rgba(0, 0, 0, 0) 16.5%, rgba(0, 0, 0, 1) 100.8%);
+  }
+}
+
+.servicesLinks {
+  @apply flex flex-col items-start relative;
+
+  .link {
+    @apply
+      bg-white
+      flex items-center
+      rounded-r-full
+      mt-3 mb-3 pt-5 pb-5 pr-10
+      transform
+      -translate-x-10 sm:-translate-x-12
+      hover:translate-x-0
+      transition-transform duration-300;
+
+    min-height: 80px;
+
+    .icon {
+      @apply ml-1 text-3xl sm:text-4xl lg:text-5xl;
+    }
+
+    .text {
+      @apply text-lg sm:text-xl lg:text-2xl font-medium ml-6 sm:ml-16 md:ml-24 lg:ml-28;
+    }
+  }
+}
+
+.service {
+  @apply lg:flex lg:items-center pt-20 md:pt-24;
+
+  &:last-child {
+    @apply pb-10 lg:pb-24;
+  }
+
+  .content {
+    @apply flex-grow ml-4 mr-4 sm:ml-6 sm:mr-6 lg:ml-12 lg:mr-12;
+
+    @screen lg {
+      margin-left: 5%;
+      margin-right: 5%;
+      //.holder {
+      //  @apply ml-auto mr-auto;
+      //
+      //  max-width: 800px;
+      //}
+    }
+
+    @screen xl {
+      .holder {
+        @apply ml-auto mr-auto;
+        padding-left: 5%;
+        padding-right: 5%;
+        max-width: calc(800px + 10%);
+      }
+    }
+
+    .list {
+      .listItem {
+        @apply flex mb-1;
+
+        .text {
+          @apply ml-1;
+        }
+
+        .chevron {
+          margin-top: 6px;
+        }
+
+        .arrow {
+          margin-top: 1.5px;
+        }
+      }
+
+      li li {
+        @apply ml-6;
+      }
+    }
+  }
+
+  .image {
+    @apply mt-20;
+
+    background-size: cover;
+    width: 100%;
+    height: 384px;
+    background-position: center center;
+
+    @screen sm {
+      height: 448px;
+    }
+
+    @screen md {
+      height: 512px;
+    }
+
+    @screen lg {
+      @apply mt-0 rounded-l-full flex-shrink-0;
+      width: 488px;
+      max-width: 40%;
+    }
+  }
+
+  &:nth-child(even) {
+    .image {
+      @apply lg:rounded-r-full lg:rounded-l-none lg:order-first;
+    }
+  }
+}

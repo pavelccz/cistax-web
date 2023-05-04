@@ -1,0 +1,43 @@
+.companiesSection {
+  @apply pt-16 pb-16;
+
+  background-color: #ececec;
+
+  .holder {
+    @apply mr-auto ml-auto;
+    max-width: 800px;
+  }
+
+  .companies {
+    @apply sm:flex;
+
+    .company {
+      @apply ml-4 mr-4 sm:ml-6 sm:mr-6 mb-12;
+
+      @screen sm {
+        max-width: 50%;
+      }
+    }
+  }
+  .gdpr {
+    @apply ml-4 mr-4 sm:ml-6 sm:mr-6;
+
+    .gdprLink {
+      @apply bg-white flex items-center mt-4 justify-between rounded-full pt-2 pb-2 pr-2 pl-5;
+
+      min-height: 40px;
+
+      .icon {
+        @apply ml-2 transition-colors duration-300;
+
+        color: #ececec;
+      }
+
+      &:hover {
+        .icon {
+          @apply text-black;
+        }
+      }
+    }
+  }
+}

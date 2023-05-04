@@ -1,0 +1,35 @@
+{
+  "name": "cistax",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@googlemaps/js-api-loader": "^1.11.4",
+    "@prismicio/client": "^4.0.0",
+    "classnames": "^2.2.6",
+    "next": "10.0.7",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "sass": "^1.32.7",
+    "tailwindcss": "1.9.5"
+  },
+  "devDependencies": {
+    "@types/classnames": "^2.2.11",
+    "@types/node": "^14.14.28",
+    "@types/react": "^17.0.2",
+    "@typescript-eslint/parser": "^4.15.1",
+    "eslint": "^7.20.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-import-resolver-typescript": "^2.3.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "typescript": "^4.1.5"
+  }
+}

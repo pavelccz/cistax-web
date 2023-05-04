@@ -1,0 +1,85 @@
+module.exports = {
+  env: {
+    browser: true,
+    es2021: true,
+    jest: true,
+  },
+  extends: ['plugin:react/recommended', 'plugin:react-hooks/recommended', 'airbnb'],
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+    ecmaVersion: 12,
+    sourceType: 'module',
+  },
+  plugins: ['react', '@typescript-eslint'],
+  rules: {
+    'no-undef': 'off', // TS does it for us
+    'no-console': ['error', { allow: ['info', 'warn', 'error'] }],
+    'import/extensions': 'off',
+    'max-len': ['error', { code: 120 }],
+    'import/prefer-default-export': 'off',
+    camelcase: 'off',
+    'nonblock-statement-body-position': 'off',
+    'no-restricted-syntax': 'off',
+    'no-await-in-loop': 'off',
+    'no-confusing-arrow': 'off',
+    'no-underscore-dangle': 'off',
+    'object-curly-newline': 'off',
+    'operator-linebreak': 'off',
+    'no-shadow': 'off',
+    '@typescript-eslint/no-shadow': 'error',
+    'import/no-unresolved': 'off',
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': ['error', { varsIgnorePattern: '^_' }],
+    'no-use-before-define': 'off',
+    '@typescript-eslint/no-use-before-define': ['error'],
+    'react/jsx-filename-extension': [2, { extensions: ['.jsx', '.tsx'] }],
+    'react/react-in-jsx-scope': 'off',
+    'arrow-body-style': 'off',
+    'jsx-a11y/click-events-have-key-events': 'off',
+    'jsx-a11y/no-static-element-interactions': 'off',
+    'jsx-a11y/label-has-associated-control': [
+      'error',
+      {
+        required: {
+          some: ['nesting', 'id'],
+        },
+      },
+    ],
+    'jsx-a11y/accessible-emoji': 'off',
+    'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+    'no-nested-ternary': 'off',
+    'react/prop-types': 'off',
+    'react/require-default-props': 'off',
+    'implicit-arrow-linebreak': 'off',
+    'react/jsx-props-no-spreading': 'off',
+    'react/button-has-type': 'off',
+    'jsx-a11y/anchor-is-valid': 'off',
+    'comma-dangle': 'off',
+    'react/jsx-one-expression-per-line': 'off',
+    'function-paren-newline': 'off',
+    'prefer-destructuring': 'off',
+    'react/jsx-wrap-multilines': 'off',
+    indent: 'off',
+    'react/jsx-indent': 'off',
+  },
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.ts', '.tsx'],
+      },
+      typescript: {
+        alwaysTryTypes: true,
+      },
+      alias: {
+        map: [['~', './']],
+        extensions: ['.ts', '.js', '.jsx', '.tsx'],
+      },
+    },
+  },
+  globals: {
+    React: 'writable',
+  },
+};
